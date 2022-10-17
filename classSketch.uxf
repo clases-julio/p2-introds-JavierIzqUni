@@ -20,7 +20,7 @@ RGB Camera
 -type = rgbCamera
 -data: [[(255-0,255-0,255-0),...],[....]]
 -area: string
--coordinates: (int,int)
+-coordinates: (int, int)
 -visionAngle: int
 --
 /+setArea()/
