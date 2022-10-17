@@ -1,0 +1,33 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>120</x><y>80</y><w>210</w><h>240</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Sensor
+--
+-id: string
+-active: boolean
+-type: string
+-data
+--
+/+getId()/
+/+setActive()/
+/+isActive()/
+/+getType()/
+/+requestData()/
+--
+Responsibilities
+-- Schema of the sensors 
+			and cameras</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>80</y><w>170</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>150;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>0</y><w>210</w><h>220</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+RGB Camera
+--
+-type = rgbCamera
+-data: [[(255-0,255-0,255-0),...],[....]]
+-area: string
+-coordinates: (int,int)
+-visionAngle: int
+--
+/+setArea()/
+/+getArea()/
+/+setCoordinates()/
+/+getCoordinates()/
+/+setVisionAngle()/
+/+getVisionAngle()/
+
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
