@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>370</x><y>130</y><w>210</w><h>340</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>760</x><y>400</y><w>210</w><h>310</h></coordinates><panel_attributes>&lt;&lt;Abstract Class&gt;&gt;
 Sensor
 --
 -id: string
@@ -6,7 +6,6 @@ Sensor
 -type: string
 -area: string
 -data: [...]
--interface: SensorInterface
 --
 /+getId()/
 /+setActive()/
@@ -17,11 +16,10 @@ Sensor
 /+requestData()/
 /-addNewData()/
 /-removeOldData()/
-/-updateInterface()/
 --
 Responsibilities
 -- Schema of the sensors 
-			and cameras</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>20</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+			and cameras</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1220</x><y>290</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
 RGB Camera
 --
 -type = rgbCamera
@@ -33,7 +31,7 @@ RGB Camera
 /+setVisionAngle()/
 /+getVisionAngle()/
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>200</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1220</x><y>470</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
 ThermalCamera
 --
 -type = thermalCamera
@@ -45,47 +43,133 @@ ThermalCamera
 /+setVisionAngle()/
 /+getVisionAngle()/
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>30</y><w>310</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;130;10;130;160;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;40;130;40;130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>380</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>300</y><w>280</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>260;10;100;10;100;160;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>450</y><w>280</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>260;40;100;40;100;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1220</x><y>650</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
  Thermometer
 --
 -type = temperatureSensor
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;220;130;220;130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>330</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;310;130;310;130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>470</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>450</y><w>280</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>260;220;100;220;100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>450</y><w>280</w><h>330</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>260;310;100;310;100;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1220</x><y>740</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
  HumiditySensor
 --
 -type = humiditySensor
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>560</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1220</x><y>830</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
  AirQualitySensor
 --
 -type = airQualitySensor
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>420</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;400;130;400;130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>660</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>450</y><w>280</w><h>420</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>260;400;100;400;100;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1220</x><y>930</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
  LightLevelSensor
 --
 -type = lightLevelSensor
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>510</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;490;130;490;130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>130</y><w>210</w><h>220</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>450</y><w>280</w><h>510</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>260;490;100;490;100;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>230</y><w>210</w><h>370</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
 Dashboard
 --
--window: 
+-loginWindow: LoginWindow
 -user: User
 -sensors:[Sensor,...]
 -keyboard: Keyboard
 -screen: Screen
+-microphone: Microhone
+-speakers: [Speaker,...]
+-alarm: boolean
 -currentInterface: Sensor
 --
-/+login()/
+/+login(): User/
 /+changeInterface()/
+/+sendMicrophoneOrder()/
+/+setAlarm()/
+/+isAlarm()/
+/+addSensor()/
+/+removeSensor()/
 /+exit()/
+/-setUser()/
 --
 Responsibilities
--- Main interface</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+-- Main interface</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>60</y><w>220</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+LoginWindow
+--
+-userNumber: int
+-userNIF: int
+-keyboard: Keyboard
+-screen: Screen
+--
+/+askData()/
+/-checkUser()/
+--
+Responsibilities
+-- Login interface
+-- Check if the user is in the database</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>980</x><y>90</y><w>110</w><h>140</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+User
+--
+-userNumber: int
+-NIF: int
+-timestamp: Date
+--
+/+addTimestamp()/
+/+getTimestamp()/
+/-isSameUser()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>770</y><w>150</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Keyboard
+--
+-id: string
+-active: boolean
+--
+/+onPress()/
+/+onRelease()/
+/+getId()/
+/+setActive()/
+/+isActive()/
+--
+Responsability:
+ Hardware part 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>770</y><w>150</w><h>160</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Screen
+--
+-id: string
+-active: boolean
+--
+/+getId()/
+/+setActive()/
+/+isActive()/
+--
+Responsability:
+ Hardware part 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>770</y><w>150</w><h>180</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Speaker
+--
+-id: string
+-active: boolean
+--
+/+getId()/
+/+setActive()/
+/+isActive()/
+/+play()/
+--
+Responsability:
+ Hardware part 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>770</y><w>150</w><h>180</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Microphone
+--
+-id: string
+-active: boolean
+--
+/+getId()/
+/+setActive()/
+/+isActive()/
+/-record()/
+--
+Responsability:
+ Hardware part 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>590</y><w>310</w><h>200</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;180;10;140;290;140;290;10</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>590</y><w>130</w><h>200</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;180;10;140;110;140;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>590</y><w>90</w><h>200</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>70;180;70;140;10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>590</y><w>270</w><h>200</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>250;180;250;140;10;140;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>940</x><y>60</y><w>190</w><h>180</h></coordinates><panel_attributes>&lt;&lt;Database&gt;&gt;
+
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLDeployment</id><coordinates><x>910</x><y>0</y><w>250</w><h>260</h></coordinates><panel_attributes>Main server
+group=group-0</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>130</y><w>150</w><h>200</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>130;10;90;10;90;180;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>300</y><w>280</w><h>150</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>260;130;90;130;90;10;10;10</additional_attributes></element></diagram>
