@@ -34,7 +34,7 @@ RGB Camera
 /+getVisionAngle()/
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>200</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
- ThermalCamera
+ThermalCamera
 --
 -type = thermalCamera
 -coordinates: (int, int)
