@@ -1,33 +1,91 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>120</x><y>80</y><w>210</w><h>240</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>370</x><y>130</y><w>210</w><h>340</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
 Sensor
 --
 -id: string
 -active: boolean
 -type: string
--data
+-area: string
+-data: [...]
+-interface: SensorInterface
 --
 /+getId()/
 /+setActive()/
 /+isActive()/
 /+getType()/
+/+setArea()/
+/+getArea()/
 /+requestData()/
+/-addNewData()/
+/-removeOldData()/
+/-updateInterface()/
 --
 Responsibilities
 -- Schema of the sensors 
-			and cameras</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>80</y><w>170</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>150;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>0</y><w>210</w><h>220</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+			and cameras</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>20</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
 RGB Camera
 --
 -type = rgbCamera
--data: [[(255-0,255-0,255-0),...],[....]]
--area: string
 -coordinates: (int, int)
 -visionAngle: int
 --
-/+setArea()/
-/+getArea()/
 /+setCoordinates()/
 /+getCoordinates()/
 /+setVisionAngle()/
 /+getVisionAngle()/
 
-</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>200</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+ ThermalCamera
+--
+-type = thermalCamera
+-coordinates: (int, int)
+-visionAngle: int
+--
+/+setCoordinates()/
+/+getCoordinates()/
+/+setVisionAngle()/
+/+getVisionAngle()/
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>30</y><w>310</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;130;10;130;160;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;40;130;40;130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>380</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+ Thermometer
+--
+-type = temperatureSensor
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;220;130;220;130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>330</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;310;130;310;130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>470</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+ HumiditySensor
+--
+-type = humiditySensor
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>560</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+ AirQualitySensor
+--
+-type = airQualitySensor
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>420</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;400;130;400;130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>660</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+ LightLevelSensor
+--
+-type = lightLevelSensor
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>180</y><w>310</w><h>510</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;490;130;490;130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>130</y><w>210</w><h>220</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Dashboard
+--
+-window: 
+-user: User
+-sensors:[Sensor,...]
+-keyboard: Keyboard
+-screen: Screen
+-currentInterface: Sensor
+--
+/+login()/
+/+changeInterface()/
+/+exit()/
+--
+Responsibilities
+-- Main interface</panel_attributes><additional_attributes></additional_attributes></element></diagram>
